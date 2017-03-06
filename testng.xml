@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5" parallel="tests">
+<parameter name="page" value="https://www.amazon.com/"></parameter>
+<parameter name="email" value="diana.ponce0209@gmail.com"></parameter>
+<parameter name="password" value="Refsc:amazone"></parameter>
+<parameter name="product" value="Resident Evil 7: Biohazard"></parameter>
+
+  <test name="TestLogIn">
+  <groups>
+  <run>
+  <include name="logIn"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="Test.LaunchDriver"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="TestSelectProduct">
+  <groups>
+  <run>
+  <include name="selectProduct"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="Test.LaunchDriver"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="TestAddToCart">
+  <groups>
+  <run>
+  <include name="addToCart"></include>
+  </run>
+  </groups>
+    <classes>
+      <class name="Test.LaunchDriver"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+</suite> <!-- Suite -->

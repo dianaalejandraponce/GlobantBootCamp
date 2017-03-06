@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="password" value="Refsc:amazone123"/>
+  <parameter name="product" value="Resident Evil 7: Biohazard"/>
+  <parameter name="page" value="https://www.amazon.com/"/>
+  <parameter name="email" value="diana.ponce0209@gmail.com"/>
+  <test name="TestSelectProduct(failed)" parallel="tests">
+    <groups>
+      <run>
+        <include name="selectProduct"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Test.LaunchDriver">
+        <methods>
+          <include name="searchAndSelectProduct" invocation-numbers="0"/>
+          <include name="executeAfterMethod"/>
+          <include name="executeAfterMethod"/>
+          <include name="executeAfterMethod"/>
+          <include name="startDriver"/>
+          <include name="startDriver"/>
+          <include name="startDriver"/>
+        </methods>
+      </class> <!-- Test.LaunchDriver -->
+    </classes>
+  </test> <!-- TestSelectProduct(failed) -->
+  <test name="TestLogIn(failed)" parallel="tests">
+    <groups>
+      <run>
+        <include name="logIn"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Test.LaunchDriver">
+        <methods>
+          <include name="startSesion" invocation-numbers="0"/>
+          <include name="executeAfterMethod"/>
+          <include name="executeAfterMethod"/>
+          <include name="executeAfterMethod"/>
+          <include name="startDriver"/>
+          <include name="startDriver"/>
+          <include name="startDriver"/>
+        </methods>
+      </class> <!-- Test.LaunchDriver -->
+    </classes>
+  </test> <!-- TestLogIn(failed) -->
+  <test name="TestAddToCart(failed)" parallel="tests">
+    <groups>
+      <run>
+        <include name="addToCart"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Test.LaunchDriver">
+        <methods>
+          <include name="executeAfterMethod"/>
+          <include name="executeAfterMethod"/>
+          <include name="executeAfterMethod"/>
+          <include name="startDriver"/>
+          <include name="startDriver"/>
+          <include name="startDriver"/>
+          <include name="addedToCart" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test.LaunchDriver -->
+    </classes>
+  </test> <!-- TestAddToCart(failed) -->
+</suite> <!-- Failed suite [Suite] -->
